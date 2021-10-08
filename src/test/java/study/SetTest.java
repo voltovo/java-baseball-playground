@@ -2,6 +2,7 @@ package study;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -33,8 +34,14 @@ public class SetTest {
     // ParameterizedTest apply
     @ParameterizedTest
     @ValueSource(ints = { 1, 2, 3 })
-    void isBlank_ShouldReturnTrueForNullOrBlankStrings(int input) {
+    void setContainsTest(int input) {
         assertThat(numbers.contains(input)).isTrue();
     }
 
+    // ParameterizedTest true or false apply
+    @ParameterizedTest
+    @CsvSource(value = { "1,true", "2,true", "3,true", "4,false", "5,false" }, delimiter = ',')
+    void setContainsTrueOrFalse(int input, boolean expected) {
+        assertThat(numbers.contains(input)).isEqualTo(expected);
+    }
 }
