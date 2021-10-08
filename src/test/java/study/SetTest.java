@@ -1,6 +1,9 @@
 package study;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
 import org.junit.jupiter.api.BeforeEach;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -20,9 +23,18 @@ public class SetTest {
     };
 
     // Test Case 구현
+
+    // set Size Check
     @Test
     void setCheckSize() {
         assertThat(numbers).hasSize(3);
+    }
+
+    // ParameterizedTest apply
+    @ParameterizedTest
+    @ValueSource(ints = { 1, 2, 3 })
+    void isBlank_ShouldReturnTrueForNullOrBlankStrings(int input) {
+        assertThat(numbers.contains(input)).isTrue();
     }
 
 }
