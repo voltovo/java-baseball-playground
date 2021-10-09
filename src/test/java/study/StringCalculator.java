@@ -11,6 +11,27 @@ public class StringCalculator {
         return text;
     }
 
+    public boolean isBlank(String text) {
+        if (text.isBlank() || text == null) {
+            return false;
+        }
+        return true;
+    }
+
+    public int stringToInt(String text) {
+        return Integer.parseInt(text);
+    }
+
+    public String[] arrayText(String text) {
+        return text.split(" ");
+    }
+
+    public int calculator(int first, char operator, int second) {
+        if (operator == '+') {
+            return add(first, second);
+        }
+    }
+
     public int add(int a, int b) {
         return a + b;
     };
@@ -32,11 +53,4 @@ public class StringCalculator {
         return a / b;
     }
 
-    public int stringToInt(String text) {
-        return Integer.parseInt(text);
-    }
-
-    public String[] arrayText(String text) {
-        return text.split(" ");
-    }
 }
