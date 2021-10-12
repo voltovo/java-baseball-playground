@@ -26,10 +26,28 @@ public class StringCalculator {
         return text.split(" ");
     }
 
+    public int calculatorArrayText(String[] array) {
+        int value = stringToInt(array[0]);
+        for (int i = 0; i < array.length - 2; i += 2) {
+            value = calculator(value, array[i + 1].charAt(0), stringToInt(array[i + 2]));
+        }
+        return value;
+    }
+
     public int calculator(int first, char operator, int second) {
         if (operator == '+') {
             return add(first, second);
         }
+        if (operator == '-') {
+            return subtract(first, second);
+        }
+        if (operator == 'x' || operator == '*') {
+            return multiply(first, second);
+        }
+        if (operator == '/') {
+            return divide(first, second);
+        }
+        throw new RuntimeException("올바른 연산식이 아닙니다.");
     }
 
     public int add(int a, int b) {
