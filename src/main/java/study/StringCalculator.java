@@ -18,6 +18,13 @@ public class StringCalculator {
         return true;
     }
 
+    public int calculatorResult(String text) {
+        if (!isBlank(text)) {
+            throw new RuntimeException();
+        }
+        return calculatorArrayText(arrayText(text));
+    }
+
     public int stringToInt(String text) {
         return Integer.parseInt(text);
     }
