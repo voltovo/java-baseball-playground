@@ -18,9 +18,9 @@
 
 - [ ] 1 ~ 9 숫자 중 랜덤으로 3개의 숫자 구현 'Computer##createRandom'
 - [ ] 사용자로부터 입력 받는 3개 숫자 예외처리 'User##inputNumber'
-  - [x] 1 ~ 9 인가?
-  - [ ] 중복 값이 있는가?
-  - [ ] 3자리 인가?
+  - [x] 1 ~ 9 인가? 'validation##validNo'
+  - [ ] 중복 값이 있는가? 'validation##validOverlap'
+  - [ ] 3자리 인가? 'validation##validLength'
 - [ ] 위치와 숫자 값이 같은 경우 - 스트라이크 'Judgment##strike'
 - [ ] 위치는 다른데 숫자 값이 같은 경우 - 볼 'Judgment##ball'
 - [ ] 숫자 값이 다른 경우 - 낫싱 'Judgment##nonthing'
