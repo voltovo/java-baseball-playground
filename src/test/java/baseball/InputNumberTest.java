@@ -9,7 +9,7 @@ public class InputNumberTest {
         assertThat(InputNumber.validNo(9)).isTrue();
         assertThat(InputNumber.validNo(1)).isTrue();
         assertThat(InputNumber.validNo(0)).isFalse();
-        assertThat(InputNumber.validNo(10)).isFalse(); 
+        assertThat(InputNumber.validNo(10)).isFalse();
     }
 
 }

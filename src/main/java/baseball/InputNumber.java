@@ -2,13 +2,11 @@ package baseball;
 
 public class InputNumber {
 
-    public static boolean validNo(int num) {
-        if (num > 0 && num < 10) {
+    private static final int MAX_NO = 9;
+    private static final int MIN_NO = 1;
 
-            
-            return true;
-        }
-        return false;
+    public static boolean validNo(int num) {
+        return num >= MIN_NO && num <= MAX_NO;
     }
 
 }
