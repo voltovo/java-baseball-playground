@@ -17,4 +17,11 @@ public class Validation {
         }
         return false;
     }
+
+    public static boolean validListSize(List<Integer> numberList) {
+        if (numberList.size() == 3) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -20,7 +20,7 @@
 - [ ] 사용자로부터 입력 받는 3개 숫자 예외처리 'User##inputNumber'
   - [x] 1 ~ 9 인가? 'validation##validNo'
   - [x] 중복 값이 있는가? 'validation##validOverlap'
-  - [ ] 3자리 인가? 'validation##validLength'
+  - [x] 3자리 인가? 'validation##validListSize'
 - [ ] 위치와 숫자 값이 같은 경우 - 스트라이크 'Judgment##strike'
 - [ ] 위치는 다른데 숫자 값이 같은 경우 - 볼 'Judgment##ball'
 - [ ] 숫자 값이 다른 경우 - 낫싱 'Judgment##nonthing'

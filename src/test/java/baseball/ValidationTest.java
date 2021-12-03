@@ -21,4 +21,11 @@ public class ValidationTest {
         assertThat(Validation.validOverlap(Arrays.asList(1, 2, 3), 1)).isTrue();
     }
 
+    @Test
+    void listSize() {
+        assertThat(Validation.validListSize(Arrays.asList(1))).isFalse();
+        assertThat(Validation.validListSize(Arrays.asList(1, 2))).isFalse();
+        assertThat(Validation.validListSize(Arrays.asList(1, 2, 3))).isTrue();
+    }
+
 }
