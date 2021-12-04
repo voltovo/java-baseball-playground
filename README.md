@@ -16,8 +16,8 @@
 2. 구현할 기능 목록 (To Do List)  
    구현할 기능을 정리한 후 기능별로 commit !!
 
-- [ ] 1 ~ 9 숫자 중 랜덤으로 3개의 숫자 구현 'Computer##createRandom'
-- [ ] 사용자로부터 입력 받는 3개 숫자 예외처리 'User##inputNumber'
+- [x] 1 ~ 9 숫자 중 랜덤으로 3개의 숫자 구현 'Computer##createRandom'
+- [x] 사용자로부터 입력 받는 3개 숫자 예외처리 'User##inputNumber'
   - [x] 1 ~ 9 인가? 'validation##validNo'
   - [x] 중복 값이 있는가? 'validation##validOverlap'
   - [x] 3자리 인가? 'validation##validListSize'
