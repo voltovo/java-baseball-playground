@@ -4,8 +4,9 @@ import java.util.List;
 
 public class Validation {
 
-    private static final int MAX_NO = 9;
-    private static final int MIN_NO = 1;
+    public static final int LIST_SIZE = 3;
+    public static final int MAX_NO = 9;
+    public static final int MIN_NO = 1;
 
     public static boolean validNo(int num) {
         return num >= MIN_NO && num <= MAX_NO;
@@ -19,7 +20,7 @@ public class Validation {
     }
 
     public static boolean validListSize(List<Integer> numberList) {
-        if (numberList.size() == 3) {
+        if (numberList.size() == LIST_SIZE) {
             return true;
         }
         return false;

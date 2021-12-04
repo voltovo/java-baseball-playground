@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class ComputerNumber {
 
     private static Integer makeRandomNumber() {
-        int num = (int)(Math.random()*9) + 1;
+        int num = (int)(Math.random()* Validation.MAX_NO) + Validation.MIN_NO;
         return num;
     }
 
@@ -15,7 +15,7 @@ public class ComputerNumber {
 
         List<Integer> randomNumbers = new ArrayList<Integer>();
         
-        while (randomNumbers.size() < 3) {
+        while (randomNumbers.size() < Validation.LIST_SIZE) {
             int randomNumber = makeRandomNumber();
             
             randomNumbers.add(randomNumber);
