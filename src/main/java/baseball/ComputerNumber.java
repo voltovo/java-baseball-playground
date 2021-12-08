@@ -19,7 +19,7 @@ public class ComputerNumber {
             int randomNumber = makeRandomNumber();
             
             randomNumbers.add(randomNumber);
-            
+            //Listd에서 중복 제거
             randomNumbers = randomNumbers.stream()
                     .distinct()
                             .collect(Collectors.toList());
