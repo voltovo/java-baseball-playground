@@ -8,7 +8,19 @@ public class Balls {
 
     public Balls(List<Integer> answers) {
         this.balls = mapToBall(answers);
-        
+
+    }
+    
+    public PlayResult play(List<Integer> answers) {
+        Balls userBalls = new Balls(answers);
+        PlayResult result = new PlayResult();
+
+        for (Ball ball : balls) {
+            JudgmentStatus status = userBalls.play(ball);
+            result.report(status);
+        }
+
+        return result;
     }
     
     public JudgmentStatus play(Ball userBall) {

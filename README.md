@@ -24,4 +24,4 @@
 - [x] 위치와 숫자 값이 같은 경우 - 스트라이크 'Judgment##strike'
 - [x] 위치는 다른데 숫자 값이 같은 경우 - 볼 'Judgment##ball'
 - [x] 숫자 값이 다른 경우 - 낫싱 'Judgment##nonthing'
-- [ ] 사용자가 입력한 값에 대한 실행 결과를 구함 'Computer##compareNumber'
+- [x] 사용자가 입력한 값에 대한 실행 결과를 구함 'Computer##compareNumber'
