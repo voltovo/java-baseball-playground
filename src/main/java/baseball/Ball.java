@@ -10,10 +10,6 @@ public class Ball {
 
     }
 
-    public String toString() {
-        return "position = " + this.position + " / ballNo = " + this.ballNo;
-    }
-    
     public JudgmentStatus play(Ball ball) {
         if (this.equals(ball)) {
             return JudgmentStatus.STRIKE;
