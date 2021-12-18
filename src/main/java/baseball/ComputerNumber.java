@@ -24,8 +24,6 @@ public class ComputerNumber {
                     .distinct()
                             .collect(Collectors.toList());
         }
-
-        System.out.println(randomNumbers);
         return randomNumbers;
         
     }

@@ -1,5 +1,6 @@
 package baseball;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Validation {
@@ -13,10 +14,10 @@ public class Validation {
     }
 
     public static boolean validOverlap(List<Integer> numberList, int no) {
-        if (numberList.contains(no)) {
-            return true;
+        if (Collections.frequency(numberList, no) > 1) {
+            return false;
         }
-        return false;
+        return true;
     }
 
     public static boolean validListSize(List<Integer> numberList) {
@@ -24,5 +25,25 @@ public class Validation {
             return true;
         }
         return false;
+    }
+
+    public boolean isValidNumberList(List<Integer> numberList) {
+        for (int i = 0; i < numberList.size(); i++) {
+            if (!validNo(numberList.get(i))) {
+                System.out.println("1 ~ 9 만 허용됩니다.");
+                return false;
+            }
+            if (!validOverlap(numberList, numberList.get(i))) {
+                System.out.println("중복된 숫자는 허용되지 않습니다.");
+                return false;
+            }
+        }
+
+        if (!validListSize(numberList)) {
+            System.out.println("3자리만 가능합니다.");
+            return false;
+        }
+
+        return true;
     }
 }

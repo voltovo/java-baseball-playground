@@ -1,6 +1,5 @@
 package baseball;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class BaseballPlay {
@@ -12,11 +11,28 @@ public class BaseballPlay {
 
         List<Integer> computerNumbers = new ComputerNumber().createRandom();
         PlayResult result = new PlayResult();
-        //while (result.isEndGame()) {
+        Balls com = new Balls(computerNumbers);
+        while (!result.isEndGame()) {
             List<Integer> inputNumbers = new PlayInput().inputUserNumber();
-            System.out.println(inputNumbers);
-            
-        //}
-        System.out.println(computerNumbers);
+
+            if (new Validation().isValidNumberList(inputNumbers)) {
+                result = com.play(inputNumbers);
+                result.printReport();
+            }
+        }
+
+        reStartGame();
+
+    }
+
+    private static void reStartGame() {
+        int askNo = new PlayInput().askRestart();
+        if (askNo == 1) {
+            startGame();
+        }
+        if (askNo == 2) {
+            System.out.println("게임을 종료합니다.");
+            System.exit(0);
+        }
     }
 }

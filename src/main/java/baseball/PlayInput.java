@@ -15,10 +15,16 @@ public class PlayInput {
 
     private List<Integer> mapToUserNumbers(String inputNumber) {
         List<Integer> userNumbers = new ArrayList<>();
-            for (int i = 0; i < inputNumber.length(); i++) {
-                userNumbers.add(inputNumber.charAt(i)-'0');
-            }
+        for (int i = 0; i < inputNumber.length(); i++) {
+            userNumbers.add(inputNumber.charAt(i) - '0');
+        }
         return userNumbers;
+    }
+    
+    public int askRestart() {
+        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+        Scanner sc = new Scanner(System.in);
+        return sc.nextInt();
     }
 
 }
